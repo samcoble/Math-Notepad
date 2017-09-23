@@ -1,0 +1,126 @@
+<!-- <!DOCTYPE html> -->
+
+<html class="scroll_overflow font_size_default html_light">
+
+	<head>
+		<title>Math Notepad</title>
+
+		<!-- Includes -->
+		<link rel="stylesheet" href="mathquill-0.10.1/mathquill.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		
+		<!-- JQuery -->
+		<script src="jquery.min.js"></script>
+
+		<!-- Mathquill core (modified a bit) -->
+		<script src="mathquill-0.10.1/mathquill.js"></script>
+
+		<!-- Init mathquill -->
+		<script src="js/corequill.js" type="text/javascript"></script>
+
+		<!-- Chrome storage API functions -->
+		<script src="js/chrome_storage.js" type="text/javascript"></script>
+
+	</head>
+
+
+
+	<body>
+
+		<div id="tool_bar" class="clearfix tool_bar_light">
+
+			<button id="new_file" class="remove_default_glow">New File</button>
+			<button id="open_file" class="remove_default_glow">Open File</button>
+			<button id="save_as" class="remove_default_glow">Save As</button>
+			<button id="toggle_settings" class="remove_default_glow">Settings</button>
+			<button id="toggle_resources" class="remove_default_glow">Resources</button>
+			<button id="toggle_wolfram" class="remove_default_glow">Wolfram</button>
+			<button id="toggle_youtube" class="remove_default_glow">YouTube</button>
+			<button id="toggle_octave" class="remove_default_glow">Octave</button>
+			
+		</div>
+
+		<div id="editor_settings_pane" class="hidden settings_pane">
+
+				<div><label class="label">Font size (%)</label><input id="font_size" class="setting_value remove_default_glow" type="text" value=""></div>
+				<div><label class="label">Line spacing (px)</label><input id="line_spacing" class="setting_value remove_default_glow" type="text" value=""></div>
+				<div><label class="label">Columns</label><input id="columns" class="setting_value remove_default_glow" type="text" value=""></div>
+				<div><label class="label">Rows</label><input id="rows" class="setting_value remove_default_glow" type="text" value=""></div>
+				<div><label class="label">Distribution</label><input id="distribution" class="setting_value remove_default_glow" type="text" value=""></div>
+				<div>
+					<label class="label">Theme</label>
+					<button class="remove_default_glow" id="light"></button>
+					<button class="remove_default_glow" id="dark"></button>
+				</div>
+				<div>
+					<label class="label">Hover outline</label>
+					<button id="hover_inset" class="setting_toggle_button setting_toggle_button_enabled remove_default_glow" type="text" value=""></button>
+				</div>
+				<div>
+					<label class="label">Row overflow</label>
+					<button id="row_overflow" class="setting_toggle_button setting_toggle_button_enabled remove_default_glow" type="text" value=""></button>
+				</div>
+
+				<div><button class="button_base remove_default_glow" id="save_settings">Save</button></div>
+
+		</div>
+
+		<div id="editor_resource_pane" class="hidden settings_pane">
+				<a class="button_base remove_default_glow" target="_blank" href="http://math.chapman.edu/~jipsen/mathquill/test/test.html">Mathquill Symbols</a>
+				<a class="button_base remove_default_glow" target="_blank" href="https://www.desmos.com/calculator">Desmos</a>
+				<a class="button_base remove_default_glow" target="_blank" href="http://www.wolframalpha.com/">Wolfram Alpha</a>
+				<a class="button_base remove_default_glow" target="_blank" href="https://octave-online.net/">Octave Online</a>
+		</div>
+
+
+
+
+		<div id="grid" class="clearfix grid_light"></div>
+
+		<div id="hidden_latex" class="hidden"></div>
+
+		<!-- Wolfram Alpha pane -->
+		<div id="webview_wolfram" class="webview_frame hidden" style="width:500px; height:400;">
+			<div class="webview_frame_hide"></div>
+			<div class="webview_frame_grip"></div>
+			<webview class="webview" src="http://m.wolframalpha.com/"></webview>
+			<div class="webview_frame_resize"></div>
+		</div>
+
+		<!-- YouTube TV pane -->
+		<div id="webview_youtube" class="webview_frame hidden" style="width:700px; height:500;">
+			<div class="webview_frame_hide"></div>
+			<div class="webview_frame_grip"></div>
+			<webview class="webview" src="https://www.youtube.com/tv"></webview>
+			<!-- <webview class="webview" src="https://www.youtube.com/"></webview> -->
+			<div class="webview_frame_resize"></div>
+		</div>
+
+		<!-- Octave pane -->
+		<div id="webview_octave" class="webview_frame hidden" style="width:500px; height:400;">
+			<div class="webview_frame_hide"></div>
+			<div class="webview_frame_grip"></div>
+			<webview class="webview" src="https://octave-online.net/"></webview>
+			<div class="webview_frame_resize"></div>
+		</div>
+
+
+
+
+		<textarea id="hidden_transfer" class="hidden"></textarea>
+
+	</body>
+
+
+		<!-- File API functions -->
+		<script src="js/file_api.js" type="text/javascript"></script>
+
+		<!-- <script src="js/dnd.js" type="text/javascript"></script> -->
+		<script src="js/app.js" type="text/javascript"></script>
+		
+</html>
+
+
+
+
+
