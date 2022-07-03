@@ -1,4 +1,8 @@
-# Math-Notepad
+# Math Notepad
+
+![Navigation](./readmeimgfiles/navigation.png)
+
+## Installation
 
 ![Navigation](./readmeimgfiles/navigation.png)
 
