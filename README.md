@@ -1,8 +1,8 @@
 # Math Notepad
 
-![Navigation](./readmeimgfiles/navigation.png)
+![Navigation](./readmeimgfiles/app.png)
 
-## Installation
+### Installation
 
 ![Navigation](./readmeimgfiles/navigation.png)
 
