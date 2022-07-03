@@ -1,6 +1,6 @@
 # Math-Notepad
 
-![Navigation](https://i.imgur.com/dXwb8aM.png)
+![Navigation](./readmeimgfiles/navigation.png)
 
 Enable developer mode in chrome://extensions<br />
 Load as an unpacked extension.<br />
