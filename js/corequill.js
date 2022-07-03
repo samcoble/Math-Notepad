@@ -234,9 +234,6 @@ function setup_grid(settings_obj)
 
 
   $('.in').css('height', settings_obj.line_spacing);
-  //$('.in').css('padding-top', settings_obj.line_spacing/2);
-  //$('.in').css('padding-bottom', settings_obj.line_spacing/2);
-
   set_hover_inset(settings_obj.hover_inset);
   set_overflow(settings_obj.row_overflow);
 }

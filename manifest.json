@@ -1,7 +1,7 @@
 {
-  "name": "Math Notepad V2",
+  "name": "Math Notepad",
   "description": "Write math freely!",
-  "version": "1.0",
+  "version": "2.1",
   "manifest_version": 2,
   "minimum_chrome_version": "31",
   "app": {
@@ -14,6 +14,7 @@
     {"fileSystem": ["write", "retainEntries", "directory"]},
     "storage",
     "http://www.wolframalpha.com/",
+    "https://www.symbolab.com/",
     "webview"
   ],
   "file_handlers": {

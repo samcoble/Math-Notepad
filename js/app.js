@@ -64,8 +64,13 @@ $(document).keyup(function(event)
 {
     if (event.altKey && event.which==16)
     {
-    	var relative_url = 'http://m.wolframalpha.com/input/?i=';
-        setWebviewURL("webview_wolfram", relative_url+encodeURIComponent(mq_field_get($('.mq-focused').attr('id'))));
+        // Step-by-step from wolfram alpha's mobile site has been discontinued?
+    	//var relative_url = 'http://m.wolframalpha.com/input/?i=';
+
+        var relative_url = 'https://www.symbolab.com/solver/step-by-step/';
+        var relative_urlend = '?or=input';
+
+        setWebviewURL("webview_wolfram", relative_url+encodeURIComponent(mq_field_get($('.mq-focused').attr('id')))+relative_urlend);
 		$("#webview_wolfram").removeClass("hidden");
 	}
 

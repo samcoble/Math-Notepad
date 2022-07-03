@@ -34,7 +34,7 @@
 			<button id="save_as" class="remove_default_glow">Save As</button>
 			<button id="toggle_settings" class="remove_default_glow">Settings</button>
 			<button id="toggle_resources" class="remove_default_glow">Resources</button>
-			<button id="toggle_wolfram" class="remove_default_glow">Wolfram</button>
+			<button id="toggle_wolfram" class="remove_default_glow">Symbolab</button>
 			<button id="toggle_youtube" class="remove_default_glow">YouTube</button>
 			<button id="toggle_octave" class="remove_default_glow">Octave</button>
 			
@@ -65,11 +65,31 @@
 
 		</div>
 
-		<div id="editor_resource_pane" class="hidden settings_pane">
+		<div id="editor_resource_pane" class="hidden settings_pane_big">
 				<a class="button_base remove_default_glow" target="_blank" href="http://math.chapman.edu/~jipsen/mathquill/test/test.html">Mathquill Symbols</a>
 				<a class="button_base remove_default_glow" target="_blank" href="https://www.desmos.com/calculator">Desmos</a>
 				<a class="button_base remove_default_glow" target="_blank" href="http://www.wolframalpha.com/">Wolfram Alpha</a>
+				<a class="button_base remove_default_glow" target="_blank" href="https://www.symbolab.com/">Symbolab</a>
 				<a class="button_base remove_default_glow" target="_blank" href="https://octave-online.net/">Octave Online</a>
+				<div>
+                    Use the \ key to enter math quill statements<br>
+                    Press tab to next input/complete<br>
+                    Overlay windows resizeable. Drag bottom right corner (kinda janky)<br>
+                    <br>
+                    Useful custom syntax:<br>
+                      \bint - blank integral<br>
+                      \bsum - blank sum<br>
+                      \ss - arbitrary spacer block<br>
+                      \text - Inputs text (new font!)<br>
+                    <br>
+                    Keyboard shortcuts (press in order):<br>
+                      Ctrl+s - save as<br>
+                      Ctrl+o - open file<br>
+                      Alt+shift - send current cell to Symbolab<br>
+                      Alt+(arrow keys) - move/displace/swap cell<br>
+
+                    <br>
+                </div>
 		</div>
 
 
@@ -83,7 +103,8 @@
 		<div id="webview_wolfram" class="webview_frame hidden" style="width:500px; height:400;">
 			<div class="webview_frame_hide"></div>
 			<div class="webview_frame_grip"></div>
-			<webview class="webview" src="http://m.wolframalpha.com/"></webview>
+			<!-- <webview class="webview" src="http://m.wolframalpha.com/"></webview> -->
+			<webview class="webview" src="https://www.symbolab.com/"></webview>
 			<div class="webview_frame_resize"></div>
 		</div>
 
